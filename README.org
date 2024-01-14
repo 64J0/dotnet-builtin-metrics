@@ -1,0 +1,29 @@
+#+TITLE: .NET Built-in Performance
+#+AUTHOR: 64J0
+
+The idea to create this project was born after watching this video from Nick
+Chapsas named [[https://www.youtube.com/watch?v=8kDugxr3Hdg&ab_channel=NickChapsas][Measure Your Application's Performance in .NET]]. This repository
+holds a very simple HTTP API that uses ASP.NET and Giraffe to exemplify what are
+the collected metrics by with built-in .NET feature.
+
++ ASP.NET Core built-in metrics documentation: [[https://learn.microsoft.com/en-us/dotnet/core/diagnostics/built-in-metrics-aspnetcore?view=aspnetcore-8.0][link]].
++ Instrumentation documentation: [[https://learn.microsoft.com/en-us/dotnet/core/diagnostics/metrics-instrumentation?view=aspnetcore-8.0][link]].
+
+** Visualize the metrics
+
+One option is to use the [[https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-counters][dotnet-counters]] tool.
+
+#+BEGIN_SRC bash :tangle no
+  # restore our dotnet tools
+  dotnet tool restore
+
+  # start the server
+  dotnet run
+
+  # in another terminal
+  # list the process id of the dotnet processes
+  dotnet dotnet-counters ps
+
+  # start monitoring the server process id
+  dotnet dotnet-counters monitor --process-id <PID> --counters System.Runtime,MyApi.Ping
+#+END_SRC

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>dotnet_builtin_performance</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Metrics/Ping.fs" />
+    <Compile Include="Handlers/Ping.fs" />
+    <Compile Include="Handlers/Healthz.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Giraffe" Version="6.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.ResourceUtilization" Version="8.1.0" />
+  </ItemGroup>
+
+</Project>
