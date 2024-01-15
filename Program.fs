@@ -10,7 +10,7 @@ let FAILURE_CODE = 1
 let webApp =
     choose
         [ route "/ping" >=> setStatusCode 200 >=> Handlers.Ping.GET.ping
-          //   route "healthz" >=> setStatusCode 200 >=> Healthz.GET.getHealthz
+          //   route "/healthz" >=> setStatusCode 200 >=> Healthz.GET.getHealthz
           ]
 
 let configureApp (app: IApplicationBuilder) = app.UseGiraffe webApp
