@@ -3,8 +3,6 @@ namespace Handlers.Ping
 open Microsoft.AspNetCore.Http
 open Giraffe
 
-// https://learn.microsoft.com/en-us/dotnet/core/diagnostics/diagnostic-health-checks?view=aspnetcore-8.0
-
 module GET =
 
     let ping: HttpHandler =
