@@ -31,3 +31,9 @@ One option is to use the [[https://learn.microsoft.com/en-us/dotnet/core/diagnos
   # start monitoring the server process id
   dotnet dotnet-counters monitor --process-id <PID> --counters System.Runtime,MyApi.Ping
 #+END_SRC
+
+Example metrics:
+
+[[./assets/example-metrics.png]]
+
++ It's probably with some bug since I'm using a pre-release version of the ~OpenTelemetry.Exporter.Prometheus.AspNetCore~ package.
