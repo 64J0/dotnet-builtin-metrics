@@ -16,6 +16,7 @@
   <ItemGroup>
     <PackageReference Include="Giraffe" Version="6.2.0" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.ResourceUtilization" Version="8.1.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.7.0-rc.1" />
   </ItemGroup>
 
 </Project>

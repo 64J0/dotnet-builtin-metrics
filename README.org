@@ -8,6 +8,7 @@ the collected metrics by with built-in .NET feature.
 
 + ASP.NET Core built-in metrics documentation: [[https://learn.microsoft.com/en-us/dotnet/core/diagnostics/built-in-metrics-aspnetcore?view=aspnetcore-8.0][link]].
 + Instrumentation documentation: [[https://learn.microsoft.com/en-us/dotnet/core/diagnostics/metrics-instrumentation?view=aspnetcore-8.0][link]].
++ View metrics in Grafana with OpenTelemetry and Prometheus: [[https://learn.microsoft.com/en-us/dotnet/core/diagnostics/metrics-collection?view=aspnetcore-8.0#view-metrics-in-grafana-with-opentelemetry-and-prometheus][link]].
 
 ** Visualize the metrics
 
@@ -19,6 +20,9 @@ One option is to use the [[https://learn.microsoft.com/en-us/dotnet/core/diagnos
 
   # start the server
   dotnet run
+  # use curl to call the /ping endpoint
+  # curl localhost:3000/ping
+  # check Prometheus-style metrics on /metrics endpoint
 
   # in another terminal
   # list the process id of the dotnet processes
